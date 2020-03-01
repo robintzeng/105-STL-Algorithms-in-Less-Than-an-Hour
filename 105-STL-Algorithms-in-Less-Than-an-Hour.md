@@ -107,3 +107,49 @@ std:: generate() // use a function that can be called with no argument
 std:: iota() // increment until fill the whole collection
 std:: replace() // can replace a value with anothere value
 ```
+## Change structure
+```C++
+std:: remove() // remove some value but they only move the value to the left and left the empty space
+std::erase()
+std::unique()// remove the adjacent duplcated in a collection // the end place would also be empty
+```
+```C++
+// the remove unique rotate replace partition partial_sort happened inplace 
+// if we want to make a new space, just use *_copy
+*_copy  --> ex: remove_copy  
+        --> ex: rotate_copy
+// 
+*_if    --> ex: find_if
+```
+
+## Transform
+```C++
+// input     x1     x2      x3     x4
+// output   f(x1)   f(x2)  f(x3) f(x4)
+std:: transform()
+// can also input 2 collections
+// input     x1         x2        x3       x4
+// input     y1         y2        y3       y4
+// output  f(x1,y1)   f(x2,y2)  f(x3,y3)  f(x4,y4)
+```
+
+## for_each
+```C++
+std::for_each(begin(collection),end(collection),f)
+// Collections:   x1     x2     x3    x4
+// Calls        f(x1)  f(x2)  f(x3)  f(x4)
+// we want the side effects
+```
+
+## Raw Memory
+fill,copy and move use operator= ,however, sometimes we want to assign them to a raw memory
+```C++
+std::uninitialized_fill()
+std::destroy()
+```
+
+## _N
+replace the end iterator with size
+```C++
+std::fill_n()
+```
